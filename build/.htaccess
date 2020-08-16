@@ -1,0 +1,10 @@
+DirectoryIndex index.html
+
+RewriteEngine on
+RewriteBase /
+
+#RewriteEngine On
+#RewriteRule ^index\.html$ / [R=301,L]
+
+RewriteCond %{REQUEST_URI} !^/index.html$
+RewriteRule .* /index.html [L]
